@@ -9,12 +9,11 @@ namespace Kata2b_Immutability
     public enum MemberLevel { Platinum, Gold, Silver, Blue}
     interface IMember: IEquatable<IMember>, IComparable<IMember>
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public MemberLevel Level {get; set;}
-        public DateTime Since { get; set; }
+        public string FirstName { get; }
+        public string LastName { get;  }
+        public MemberLevel Level {get; }
+        public DateTime Since { get; }
 
-        public string[] Benefits { get; set; }
         public void RandomInit();
     }
 
