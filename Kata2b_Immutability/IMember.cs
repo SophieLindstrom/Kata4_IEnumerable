@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 namespace Kata2b_Immutability
 {
     public enum MemberLevel { Platinum, Gold, Silver, Blue}
-    interface IMember: IEquatable<IMember>, IComparable<IMember>
+    interface IMember: IComparable<IMember>
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public MemberLevel Level {get; set;}
-        public DateTime Since { get; set; }
-
-        public string[] Benefits { get; set; }
-        public void RandomInit();
-    }
-
- 
+        public string FirstName { get; init; }
+        public string LastName { get; init; }
+        public MemberLevel Level {get; init; }
+        public DateTime Since { get; init; }
+    } 
 }

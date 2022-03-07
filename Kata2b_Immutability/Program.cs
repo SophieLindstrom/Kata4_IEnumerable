@@ -1,8 +1,14 @@
 ﻿using Kata2b_Immutability;
 
 #region Kata test of Member and MemberList
+Console.WriteLine("Running branch ImmRecord");
+
 Console.WriteLine("Create a couple of members");
 var member1 = Member.Factory.CreateWithRandomData();
+
+var newMember = member1 with { FirstName = "Karl", LastName = "Petterson" };
+Console.WriteLine($"Member from immutable instance: {newMember}");
+
 Console.WriteLine($"member1: {member1}");
 var member2 = Member.Factory.CreateWithRandomData();
 Console.WriteLine($"member2: {member2}");
