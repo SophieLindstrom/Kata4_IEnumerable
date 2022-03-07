@@ -86,8 +86,7 @@ namespace Kata2b_Immutability
         #region Value change methods in an immutable class
         public Member SetFirstName(string name)
         {
-            var newMember = new Member(this);
-            newMember.FirstName = name; 
+            var newMember = new Member(this) {FirstName = name};
             return newMember;
         }
         public Member SetLastName(string name)
