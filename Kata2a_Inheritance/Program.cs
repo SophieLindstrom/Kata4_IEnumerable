@@ -15,9 +15,12 @@ Console.WriteLine(myHilton);
 Console.WriteLine(myScandic);
 
 Console.WriteLine();
-var myList = MemberList.Factory.CreateWithRandomData(20);
-Console.WriteLine(myList);  
+var myList = MemberList.Factory.CreateRadissonHilton(20);
+Console.WriteLine(myList);
 
+Console.WriteLine();
+var myList1 = MemberList.Factory.CreateScandicOnly(20);
+Console.WriteLine(myList1);
 #endregion
 
 #region For Exercise: Refresh how to generate random initialization data

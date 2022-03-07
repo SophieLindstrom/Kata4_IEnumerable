@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kata2a_Inheritance
+namespace Kata2b_Immutability
 {
     class MemberList : IMemberList
     {
@@ -42,24 +42,12 @@ namespace Kata2a_Inheritance
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static IMemberList CreateRadissonHilton(int NrOfItems)
+            internal static IMemberList CreateWithRandomData(int NrOfItems)
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
                 {
-                    if (i % 2 == 0)
-                        memberlist._members.Add(RadissonMember.Factory.CreateWithRandomData());
-                    else
-                        memberlist._members.Add(HiltonMember.Factory.CreateWithRandomData());
-                }
-                return memberlist;
-            }
-            internal static IMemberList CreateScandicOnly(int NrOfItems)
-            {
-                var memberlist = new MemberList();
-                for (int i = 0; i < NrOfItems; i++)
-                {
-                    memberlist._members.Add(ScandicMember.Factory.CreateWithRandomData());
+                    memberlist._members.Add(Member.Factory.CreateWithRandomData());
                 }
                 return memberlist;
             }
