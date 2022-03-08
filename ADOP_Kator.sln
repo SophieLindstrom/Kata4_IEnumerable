@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2_IEquatable_IComparabl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2a_Inheritance", "Kata2a_Inheritance\Kata2a_Inheritance.csproj", "{0E0A6837-F1FF-4B81-9DF2-C17E95EBF9D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata2b_Immutability", "Kata2b_Immutability\Kata2b_Immutability.csproj", "{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2b_Immutability", "Kata2b_Immutability\Kata2b_Immutability.csproj", "{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata3_Delegates", "Kata3_Delegates\Kata3_Delegates.csproj", "{9E894C82-34F3-480D-BCDA-1A7F4D839828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E894C82-34F3-480D-BCDA-1A7F4D839828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E894C82-34F3-480D-BCDA-1A7F4D839828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E894C82-34F3-480D-BCDA-1A7F4D839828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E894C82-34F3-480D-BCDA-1A7F4D839828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
