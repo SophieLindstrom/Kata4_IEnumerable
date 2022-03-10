@@ -26,7 +26,7 @@ Console.WriteLine();
 #region Delegate Methods
 static void HelloHilton(IMember member)
 {
-    Console.WriteLine($"Warm welcome {member.FirstName}!!");
+    Console.WriteLine($"Warm Hilton welcome {member.FirstName}!!");
     if (member.Level == MemberLevel.Platinum)
     {
         Console.WriteLine("Wow!");
@@ -34,7 +34,7 @@ static void HelloHilton(IMember member)
 }
 static void HelloRadisson(IMember member)
 {
-    Console.WriteLine($"Not so warm welcome {member.FirstName}!!");
+    Console.WriteLine($"Warm Radisson welcome {member.FirstName}!!");
 }
 #endregion
 
