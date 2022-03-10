@@ -47,6 +47,7 @@ namespace Kata2b_Immutability
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
                 {
+                    memberlist._members.Add(immRecordMember.Factory.CreateWithRandomData());
                     memberlist._members.Add(ImmClassMember.Factory.CreateWithRandomData());
                 }
                 return memberlist;
