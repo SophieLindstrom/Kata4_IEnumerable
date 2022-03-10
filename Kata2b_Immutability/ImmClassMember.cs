@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kata2b_Immutability
 {
-    class Member : IMember
+    class ImmClassMember : IMember
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public MemberLevel Level { get; set; }
-        public DateTime Since { get; set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public MemberLevel Level { get; private set; }
+        public DateTime Since { get; private set; }
 
         public override string ToString() => $"{FirstName} {LastName} is a {Level} member since {Since.Year}";
 
@@ -40,6 +40,11 @@ namespace Kata2b_Immutability
         public override int GetHashCode() => (this.FirstName, this.LastName, this.Level, this.Since).GetHashCode();
         #endregion
 
+        #region operator overload
+        public static bool operator ==(IMember left, ImmClassMember right) => left.Equals(right);
+        public static bool operator !=(IMember left, ImmClassMember right) => !left.Equals(right);
+
+        #endregion
         public void RandomInit()
         {
             var rnd = new Random();
@@ -69,15 +74,37 @@ namespace Kata2b_Immutability
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static IMember CreateWithRandomData()
+            internal static ImmClassMember CreateWithRandomData()
             {
-                var member = new Member();
+                var member = new ImmClassMember();
                 member.RandomInit();
                 return member;  
             }
         }
         #endregion
 
-        public Member() { }
+        #region Value change methods in an immutable class
+        public ImmClassMember SetFirstName(string name)
+        {
+            var newMember = new ImmClassMember(this) {FirstName = name};
+            return newMember;
+        }
+        public ImmClassMember SetLastName(string name)
+        {
+            var newMember = new ImmClassMember(this);
+            newMember.LastName = name;
+            return newMember;
+
+        }
+
+        #endregion
+        public ImmClassMember() { }
+        public ImmClassMember(ImmClassMember src)
+        {
+            this.Since = src.Since; 
+            this.Level = src.Level; 
+            this.FirstName = src.FirstName; 
+            this.LastName = src.LastName;   
+        }
     }
 }

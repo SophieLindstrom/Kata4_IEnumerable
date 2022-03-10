@@ -71,7 +71,7 @@ namespace Kata2a_Inheritance
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static IMember CreateWithRandomData()
+            internal static Member CreateWithRandomData()
             {
                 var member = new Member();
                 member.RandomInit();
