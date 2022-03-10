@@ -42,7 +42,7 @@ namespace Kata2a_Inheritance
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static IMemberList CreateRadissonHilton(int NrOfItems)
+            internal static MemberList CreateRadissonHilton(int NrOfItems)
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
@@ -54,7 +54,7 @@ namespace Kata2a_Inheritance
                 }
                 return memberlist;
             }
-            internal static IMemberList CreateScandicOnly(int NrOfItems)
+            internal static MemberList CreateScandicOnly(int NrOfItems)
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kata2b_Immutability
 {
-    class Member : IMember
+    class ImmClassMember : IMember
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
@@ -41,8 +41,8 @@ namespace Kata2b_Immutability
         #endregion
 
         #region operator overload
-        public static bool operator ==(IMember left, Member right) => left.Equals(right);
-        public static bool operator !=(IMember left, Member right) => !left.Equals(right);
+        public static bool operator ==(IMember left, ImmClassMember right) => left.Equals(right);
+        public static bool operator !=(IMember left, ImmClassMember right) => !left.Equals(right);
 
         #endregion
         public void RandomInit()
@@ -74,9 +74,9 @@ namespace Kata2b_Immutability
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static Member CreateWithRandomData()
+            internal static ImmClassMember CreateWithRandomData()
             {
-                var member = new Member();
+                var member = new ImmClassMember();
                 member.RandomInit();
                 return member;  
             }
@@ -84,22 +84,22 @@ namespace Kata2b_Immutability
         #endregion
 
         #region Value change methods in an immutable class
-        public Member SetFirstName(string name)
+        public ImmClassMember SetFirstName(string name)
         {
-            var newMember = new Member(this) {FirstName = name};
+            var newMember = new ImmClassMember(this) {FirstName = name};
             return newMember;
         }
-        public Member SetLastName(string name)
+        public ImmClassMember SetLastName(string name)
         {
-            var newMember = new Member(this);
+            var newMember = new ImmClassMember(this);
             newMember.LastName = name;
             return newMember;
 
         }
 
         #endregion
-        public Member() { }
-        public Member(Member src)
+        public ImmClassMember() { }
+        public ImmClassMember(ImmClassMember src)
         {
             this.Since = src.Since; 
             this.Level = src.Level; 

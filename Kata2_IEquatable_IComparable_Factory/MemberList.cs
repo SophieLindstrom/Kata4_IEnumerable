@@ -42,7 +42,7 @@ namespace Kata2_IEquatable_IComparable_Factory
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static IMemberList CreateWithRandomData(int NrOfItems)
+            internal static MemberList CreateWithRandomData(int NrOfItems)
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
