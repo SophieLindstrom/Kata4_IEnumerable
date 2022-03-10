@@ -47,8 +47,11 @@ namespace Kata2b_Immutability
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
                 {
-                    memberlist._members.Add(immRecordMember.Factory.CreateWithRandomData());
-                    memberlist._members.Add(ImmClassMember.Factory.CreateWithRandomData());
+                    //As the list is of type IMember I can mix both types as both implement IMember
+                    if (i%2 == 0)
+                        memberlist._members.Add(immRecordMember.Factory.CreateWithRandomData());
+                    else
+                        memberlist._members.Add(ImmClassMember.Factory.CreateWithRandomData());
                 }
                 return memberlist;
             }

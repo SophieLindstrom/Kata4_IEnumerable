@@ -45,40 +45,36 @@ namespace Kata2b_Immutability
         public static bool operator !=(IMember left, ImmClassMember right) => !left.Equals(right);
 
         #endregion
-        public void RandomInit()
-        {
-            var rnd = new Random();
-            bool bAllOK = false;
-            while (!bAllOK)
-            {
-                try
-                {
-                    int year = rnd.Next(1980, DateTime.Today.Year + 1);
-                    int month = rnd.Next(1, 13);
-                    int day = rnd.Next(1, 31);
-
-                    this.Since = new DateTime(year, month, day);
-                    this.Level = (MemberLevel)rnd.Next((int)MemberLevel.Platinum, (int)MemberLevel.Blue + 1);
-
-                    string[] _firstnames = "Fred John Mary Jane Oliver Marie".Split(' ');
-                    string[] _lastnames = "Johnsson Pearsson Smith Ewans Andersson".Split(' ');
-                    this.FirstName = _firstnames[rnd.Next(0, _firstnames.Length)];
-                    this.LastName = _lastnames[rnd.Next(0, _lastnames.Length)];
-
-                    bAllOK = true;
-                }
-                catch { }
-            }
-        }
 
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
             internal static ImmClassMember CreateWithRandomData()
             {
-                var member = new ImmClassMember();
-                member.RandomInit();
-                return member;  
+                var rnd = new Random();
+                while (true)
+                {
+                    try
+                    {
+                        int year = rnd.Next(1980, DateTime.Today.Year + 1);
+                        int month = rnd.Next(1, 13);
+                        int day = rnd.Next(1, 31);
+
+                        var since = new DateTime(year, month, day);
+                        var level = (MemberLevel)rnd.Next((int)MemberLevel.Platinum, (int)MemberLevel.Blue + 1);
+
+                        string[] _firstnames = "Fred John Mary Jane Oliver Marie".Split(' ');
+                        string[] _lastnames = "Johnsson Pearsson Smith Ewans Andersson".Split(' ');
+
+                        var firstname = _firstnames[rnd.Next(0, _firstnames.Length)];
+                        var lastname = _lastnames[rnd.Next(0, _lastnames.Length)];
+
+                        var member = new ImmClassMember { FirstName = firstname, LastName = lastname, Level = level, Since = since };
+
+                        return member;
+                    }
+                    catch { }
+                }
             }
         }
         #endregion
@@ -94,9 +90,13 @@ namespace Kata2b_Immutability
             var newMember = new ImmClassMember(this);
             newMember.LastName = name;
             return newMember;
-
         }
-
+        public ImmClassMember SetLevel(MemberLevel level)
+        {
+            var newMember = new ImmClassMember(this);
+            newMember.Level = level;
+            return newMember;
+        }
         #endregion
         public ImmClassMember() { }
         public ImmClassMember(ImmClassMember src)

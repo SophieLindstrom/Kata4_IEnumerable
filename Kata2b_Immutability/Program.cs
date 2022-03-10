@@ -1,27 +1,24 @@
 ﻿using Kata2b_Immutability;
 
 #region Kata test of Member and MemberList
-Console.WriteLine("Create a couple of members");
+Console.WriteLine("Create a couple of immutable members");
+
 var member1 = ImmClassMember.Factory.CreateWithRandomData();
-var newMember = member1.SetFirstName("Karl").SetLastName("Petterson");
-Console.WriteLine($"Member from immutable instance: {newMember}");
+Console.WriteLine($"\nmember1 of type {member1.GetType().Name}: {member1}");
+var newMember1 = member1.SetFirstName("Karl").SetLastName("Petterson").SetLevel(MemberLevel.Platinum);
+Console.WriteLine($"Modified Member from immutable member1: {newMember1}");
 
-var member1 = immRecordMember.Factory.CreateWithRandomData();
-
-var newMember = member1 with { FirstName = "Karl", LastName = "Petterson" };
-Console.WriteLine($"Member from immutable instance: {newMember}");
-
-Console.WriteLine($"member1: {member1}");
-var member2 = ImmClassMember.Factory.CreateWithRandomData();
 var member2 = immRecordMember.Factory.CreateWithRandomData();
-Console.WriteLine($"member2: {member2}");
+Console.WriteLine($"\nmember2 of type {member2.GetType().Name}: {member2}");
+var newMember2 = member2 with { FirstName = "Karl", LastName = "Petterson" };
+Console.WriteLine($"Modified Member from immutable member2: {newMember2}");
 
-Console.WriteLine("\nCreate a 20 Hilton members");
+Console.WriteLine("\nCreate a 20 Hilton members of mixed types");
 var HiltonMembers = MemberList.Factory.CreateWithRandomData(20); 
 HiltonMembers.Sort();
 Console.WriteLine(HiltonMembers);
 
-Console.WriteLine("\nCreate a 20 Radisson members");
+Console.WriteLine("\nCreate a 20 Radisson members of mixed types");
 var RadissonMembers = MemberList.Factory.CreateWithRandomData(20);
 RadissonMembers.Sort();
 Console.WriteLine(RadissonMembers);
