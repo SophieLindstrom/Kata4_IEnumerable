@@ -4,13 +4,13 @@
 Console.WriteLine("Running branch ImmRecord");
 
 Console.WriteLine("Create a couple of members");
-var member1 = Member.Factory.CreateWithRandomData();
+var member1 = immRecordMember.Factory.CreateWithRandomData();
 
 var newMember = member1 with { FirstName = "Karl", LastName = "Petterson" };
 Console.WriteLine($"Member from immutable instance: {newMember}");
 
 Console.WriteLine($"member1: {member1}");
-var member2 = Member.Factory.CreateWithRandomData();
+var member2 = immRecordMember.Factory.CreateWithRandomData();
 Console.WriteLine($"member2: {member2}");
 
 Console.WriteLine("\nCreate a 20 Hilton members");

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kata2b_Immutability
+﻿namespace Kata2b_Immutability
 {
-    record Member (string FirstName, string LastName, MemberLevel Level, DateTime Since) : IMember
+    record immRecordMember (string FirstName, string LastName, MemberLevel Level, DateTime Since) : IMember
     {
 
         #region Implement IComparable
@@ -31,7 +25,7 @@ namespace Kata2b_Immutability
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static Member CreateWithRandomData()
+            internal static immRecordMember CreateWithRandomData()
             {
                 var rnd = new Random();
                 while (true)
@@ -51,7 +45,7 @@ namespace Kata2b_Immutability
                         var firstname = _firstnames[rnd.Next(0, _firstnames.Length)];
                         var lastname = _lastnames[rnd.Next(0, _lastnames.Length)];
 
-                        var member = new Member (firstname, lastname, level, since);
+                        var member = new immRecordMember (firstname, lastname, level, since);
 
                         return member;
                     }
