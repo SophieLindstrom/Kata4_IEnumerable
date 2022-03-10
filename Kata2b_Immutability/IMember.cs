@@ -13,10 +13,6 @@ namespace Kata2b_Immutability
         public string LastName { get; set; }
         public MemberLevel Level {get; set;}
         public DateTime Since { get; set; }
-
-        public string[] Benefits { get; set; }
         public void RandomInit();
-    }
-
- 
+    } 
 }

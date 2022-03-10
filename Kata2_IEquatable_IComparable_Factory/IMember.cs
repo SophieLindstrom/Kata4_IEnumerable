@@ -14,9 +14,6 @@ namespace Kata2_IEquatable_IComparable_Factory
         public MemberLevel Level {get; set;}
         public DateTime Since { get; set; }
 
-        public string[] Benefits { get; set; }
         public void RandomInit();
     }
-
- 
-}
+ }

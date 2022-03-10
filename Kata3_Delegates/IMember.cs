@@ -14,9 +14,6 @@ namespace Kata3_Delegates
         public MemberLevel Level {get; set;}
         public DateTime Since { get; set; }
 
-        public string[] Benefits { get; set; }
         public void RandomInit();
-    }
-
- 
+    } 
 }

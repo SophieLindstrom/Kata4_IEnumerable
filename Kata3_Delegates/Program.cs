@@ -23,7 +23,7 @@ Console.WriteLine($"Radisson member[0]: {RadissonMembers[0]}");
 Console.WriteLine();
 #endregion
 
-#region Fredriks plugin (Delegates)
+#region Delegate Methods
 static void HelloHilton(IMember member)
 {
     Console.WriteLine($"Warm welcome {member.FirstName}!!");

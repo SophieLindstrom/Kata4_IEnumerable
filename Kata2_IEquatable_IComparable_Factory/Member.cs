@@ -12,8 +12,6 @@ namespace Kata2_IEquatable_IComparable_Factory
         public string LastName { get; set; }
         public MemberLevel Level { get; set; }
         public DateTime Since { get; set; }
-        public virtual string[] Benefits { get; set ; }
-
         public override string ToString() => $"{FirstName} {LastName} is a {Level} member since {Since.Year}";
 
         #region Implement IComparable
