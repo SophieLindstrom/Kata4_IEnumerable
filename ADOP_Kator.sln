@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Kata2.txt = Kata2.txt
 		Kata2a.txt = Kata2a.txt
 		Kata3_Delegates.txt = Kata3_Delegates.txt
+		Kata4_IEnumerable.txt = Kata4_IEnumerable.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2_IEquatable_IComparable_Factory", "Kata2_IEquatable_IComparable_Factory\Kata2_IEquatable_IComparable_Factory.csproj", "{46D801B6-B18E-4844-A93D-307887A7F282}"
