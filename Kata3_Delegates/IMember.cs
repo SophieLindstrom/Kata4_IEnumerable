@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kata3_Delegates
+namespace Kata4_IEnumerable
 {
     public enum MemberLevel { Platinum, Gold, Silver, Blue}
     interface IMember: IEquatable<IMember>, IComparable<IMember>

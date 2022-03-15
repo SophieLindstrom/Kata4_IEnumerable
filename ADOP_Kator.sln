@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2a_Inheritance", "Kata2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata2b_Immutability", "Kata2b_Immutability\Kata2b_Immutability.csproj", "{56E13A12-B6F0-40EF-B288-5A0D0139C8EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata3_Delegates", "Kata3_Delegates\Kata3_Delegates.csproj", "{9E894C82-34F3-480D-BCDA-1A7F4D839828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata4_IEnumerable", "Kata3_Delegates\Kata4_IEnumerable.csproj", "{9E894C82-34F3-480D-BCDA-1A7F4D839828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

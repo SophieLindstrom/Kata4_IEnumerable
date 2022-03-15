@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kata3_Delegates
+namespace Kata4_IEnumerable
 {
     class MemberList : IMemberList
     {

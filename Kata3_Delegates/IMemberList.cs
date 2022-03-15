@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kata3_Delegates
+namespace Kata4_IEnumerable
 {
     interface IMemberList
     {

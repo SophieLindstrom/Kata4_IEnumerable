@@ -1,4 +1,4 @@
-﻿using Kata3_Delegates;
+﻿using Kata4_IEnumerable;
 
 #region Kata test of Member and MemberList
 Console.WriteLine("Create a couple of members");
