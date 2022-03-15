@@ -1,4 +1,4 @@
-Kata3
+Kata3_Delegates
 
 Bygger vidare på Kata2 och övar delegates.
 Passa också på att öva Git; t ex, git commit, git squash, git revert, git reset, git branch, git checkout, 

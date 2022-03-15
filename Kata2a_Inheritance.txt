@@ -1,4 +1,4 @@
-Kata2a
+Kata2a_Inheritance
 
 Bygger vidare på Kata2 och övar arv, polymorfism och till sist immutability.
 Vi ska också öva lite mer avancerad Git; git commit, git squash, git revert, git reset, git branch, git checkout, git push, git fetch, git pull, git merge, git cherrypick, git ammend

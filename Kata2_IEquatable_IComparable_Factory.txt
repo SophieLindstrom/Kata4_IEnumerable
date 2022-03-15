@@ -1,4 +1,4 @@
-Kata2
+Kata2_IEquatable_IComparable_Factory
 
 Du nu enkapsulera en lista av Medlemmar i ett Hotell lojalitets program. Du gör detta genom att skapa men class som
 representerar en medlem (Member) och en lista på medlemmar (MemberList)

@@ -5,8 +5,9 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DA621887-9F40-48BE-B3CC-E3067DF76876}"
 	ProjectSection(SolutionItems) = preProject
-		Kata2.txt = Kata2.txt
-		Kata2a.txt = Kata2a.txt
+		Kata2_IEquatable_IComparable_Factory.txt = Kata2_IEquatable_IComparable_Factory.txt
+		Kata2a_Inheritance.txt = Kata2a_Inheritance.txt
+		Kata2b_Immutability.txt = Kata2b_Immutability.txt
 		Kata3_Delegates.txt = Kata3_Delegates.txt
 		Kata4_IEnumerable.txt = Kata4_IEnumerable.txt
 	EndProjectSection
