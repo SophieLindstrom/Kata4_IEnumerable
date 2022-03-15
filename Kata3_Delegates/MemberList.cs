@@ -42,7 +42,7 @@ namespace Kata3_Delegates
         #region Class Factory for creating an instance filled with Random data
         internal static class Factory
         {
-            internal static MemberList CreateWithRandomData(int NrOfItems, Action<IMember> MemberAction)
+            internal static MemberList CreateWithRandomData(int NrOfItems, Action<IMember> NewMemberAction)
             {
                 var memberlist = new MemberList();
                 for (int i = 0; i < NrOfItems; i++)
@@ -50,7 +50,7 @@ namespace Kata3_Delegates
                     var newMember = Member.Factory.CreateWithRandomData();
                     memberlist._members.Add(newMember);
 
-                    MemberAction(newMember);
+                    NewMemberAction(newMember);
                 }
                 return memberlist;
             }
